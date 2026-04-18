@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F7FA;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6D8B74;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A6741;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="snowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8F4FD;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFDAB9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5C5A0;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="coinGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DAA520;stop-opacity:1" />
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#00000040"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="800" height="900" fill="url(#skyGrad)"/>
+
+  <!-- Clouds -->
+  <g opacity="0.85">
+    <ellipse cx="120" cy="80" rx="70" ry="30" fill="white"/>
+    <ellipse cx="160" cy="65" rx="50" ry="35" fill="white"/>
+    <ellipse cx="80" cy="75" rx="45" ry="25" fill="white"/>
+
+    <ellipse cx="620" cy="100" rx="80" ry="28" fill="white"/>
+    <ellipse cx="660" cy="82" rx="55" ry="38" fill="white"/>
+    <ellipse cx="575" cy="95" rx="50" ry="24" fill="white"/>
+
+    <ellipse cx="350" cy="55" rx="60" ry="22" fill="white" opacity="0.7"/>
+    <ellipse cx="390" cy="42" rx="40" ry="28" fill="white" opacity="0.7"/>
+  </g>
+
+  <!-- Mountain body -->
+  <polygon points="400,180 80,750 720,750" fill="url(#mountainGrad)" filter="url(#shadow)"/>
+  <!-- Mountain shading -->
+  <polygon points="400,180 400,750 720,750" fill="#3A5430" opacity="0.3"/>
+  <!-- Mountain rocky highlights -->
+  <polyline points="250,600 280,560 310,590 340,540" stroke="#8BC34A" stroke-width="2" fill="none" opacity="0.5"/>
+  <polyline points="480,570 510,530 540,560 570,510" stroke="#8BC34A" stroke-width="2" fill="none" opacity="0.5"/>
+
+  <!-- Snow cap -->
+  <polygon points="400,180 330,380 470,380" fill="url(#snowGrad)" opacity="0.95"/>
+  <!-- Snow details -->
+  <path d="M340,350 Q360,330 380,345 Q400,325 420,340 Q440,320 460,335" stroke="#C8E6FA" stroke-width="2" fill="none"/>
+
+  <!-- Summit flag sign: 小金持ち山 -->
+  <rect x="455" y="238" width="5" height="70" fill="#8B4513" rx="2"/>
+  <rect x="460" y="238" width="95" height="38" fill="#FF6B35" rx="5"/>
+  <text x="507" y="262" text-anchor="middle" font-family="serif" font-size="14" fill="white" font-weight="bold">小金持ち山</text>
+  <text x="507" y="277" text-anchor="middle" font-family="serif" font-size="10" fill="white">SUMMIT 1,234m</text>
+
+  <!-- ===== MAIN CHARACTER ===== -->
+  <!-- Character base position: standing on summit, x=390, y=310 -->
+
+  <!-- Shadow under character -->
+  <ellipse cx="395" cy="375" rx="40" ry="10" fill="#00000030"/>
+
+  <!-- Legs -->
+  <rect x="372" y="340" width="18" height="38" rx="9" fill="#2C3E7A"/>
+  <rect x="397" y="340" width="18" height="38" rx="9" fill="#2C3E7A"/>
+  <!-- Shoes -->
+  <ellipse cx="381" cy="378" rx="13" ry="7" fill="#1A1A2E"/>
+  <ellipse cx="406" cy="378" rx="13" ry="7" fill="#1A1A2E"/>
+
+  <!-- Body / Jacket (tight-clutching pose, hunched forward slightly) -->
+  <path d="M365,260 Q360,300 362,345 L435,345 Q437,300 432,260 Z" fill="#3D5A9E" rx="10"/>
+  <!-- Jacket collar -->
+  <path d="M375,265 L398,285 L421,265" stroke="#2C4A8E" stroke-width="3" fill="#2C4A8E"/>
+  <!-- Jacket buttons -->
+  <circle cx="398" cy="295" r="3" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="398" cy="310" r="3" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="398" cy="325" r="3" fill="#FFFFFF" opacity="0.7"/>
+
+  <!-- LEFT ARM - tightly clutching money bag -->
+  <path d="M365,275 Q340,285 330,310 Q325,325 335,330 Q345,305 360,295 L368,305 Z" fill="#3D5A9E"/>
+  <!-- Left hand -->
+  <circle cx="330" cy="328" r="12" fill="url(#skinGrad)"/>
+  <!-- Knuckle lines - gripping tight -->
+  <path d="M322,324 Q330,320 338,324" stroke="#E8A87C" stroke-width="1.5" fill="none"/>
+  <path d="M320,329 Q330,325 340,329" stroke="#E8A87C" stroke-width="1.5" fill="none"/>
+
+  <!-- RIGHT ARM - tightly clutching coin purse -->
+  <path d="M432,275 Q455,285 465,310 Q470,325 460,330 Q450,305 437,295 L430,305 Z" fill="#3D5A9E"/>
+  <!-- Right hand -->
+  <circle cx="465" cy="328" r="12" fill="url(#skinGrad)"/>
+
+  <!-- MONEY BAG (left side) - big fat bag -->
+  <g filter="url(#shadow)">
+    <circle cx="305" cy="340" r="32" fill="#8B6914"/>
+    <circle cx="305" cy="340" r="28" fill="#C8A828"/>
+    <!-- Bag tie -->
+    <rect x="295" y="305" width="20" height="14" rx="5" fill="#8B6914"/>
+    <path d="M297,308 Q305,302 313,308" stroke="#6B4F10" stroke-width="2" fill="none"/>
+    <!-- Yen symbol on bag -->
+    <text x="305" y="347" text-anchor="middle" font-family="serif" font-size="22" fill="#8B6914" font-weight="bold">¥</text>
+    <!-- Bag shine -->
+    <ellipse cx="293" cy="328" rx="8" ry="5" fill="#FFD700" opacity="0.5" transform="rotate(-30,293,328)"/>
+  </g>
+
+  <!-- COIN PURSE (right side) -->
+  <g filter="url(#shadow)">
+    <ellipse cx="490" cy="338" rx="22" ry="18" fill="#C0392B"/>
+    <ellipse cx="490" cy="330" rx="10" ry="6" fill="#E74C3C"/>
+    <!-- Clasp -->
+    <rect x="483" y="323" width="14" height="6" rx="3" fill="#F39C12"/>
+    <circle cx="487" cy="326" r="2" fill="#E67E22"/>
+    <circle cx="493" cy="326" r="2" fill="#E67E22"/>
+    <!-- Bulging coins -->
+    <circle cx="484" cy="340" r="5" fill="#FFD700" opacity="0.8"/>
+    <circle cx="493" cy="343" r="5" fill="#FFD700" opacity="0.8"/>
+    <circle cx="484" cy="340" r="3" fill="#DAA520"/>
+    <circle cx="493" cy="343" r="3" fill="#DAA520"/>
+  </g>
+
+  <!-- NECK -->
+  <rect x="388" y="248" width="22" height="20" rx="8" fill="url(#skinGrad)"/>
+
+  <!-- HEAD -->
+  <ellipse cx="399" cy="225" rx="42" ry="46" fill="url(#skinGrad)" filter="url(#shadow)"/>
+  <!-- Ear left -->
+  <ellipse cx="357" cy="228" rx="10" ry="13" fill="url(#skinGrad)"/>
+  <ellipse cx="357" cy="228" rx="6" ry="9" fill="#F5C5A0"/>
+  <!-- Ear right -->
+  <ellipse cx="441" cy="228" rx="10" ry="13" fill="url(#skinGrad)"/>
+  <ellipse cx="441" cy="228" rx="6" ry="9" fill="#F5C5A0"/>
+
+  <!-- HAIR - anime style, messy/stressed -->
+  <!-- Back hair -->
+  <ellipse cx="399" cy="195" rx="46" ry="30" fill="#1A0A00"/>
+  <!-- Main hair -->
+  <path d="M357,200 Q360,170 380,162 Q399,155 418,162 Q438,170 441,200" fill="#2C1500"/>
+  <!-- Hair spikes - stressed look -->
+  <path d="M360,190 Q350,165 363,155 Q358,170 368,178 Z" fill="#2C1500"/>
+  <path d="M375,172 Q372,148 385,142 Q378,158 383,168 Z" fill="#2C1500"/>
+  <path d="M399,168 Q398,143 410,138 Q403,154 407,164 Z" fill="#2C1500"/>
+  <path d="M420,172 Q425,148 435,153 Q424,162 422,172 Z" fill="#2C1500"/>
+  <path d="M436,188 Q445,165 455,170 Q442,175 438,185 Z" fill="#2C1500"/>
+  <!-- Hair highlight -->
+  <path d="M375,178 Q385,168 400,170 Q392,175 385,180 Z" fill="#8B5A2B" opacity="0.6"/>
+
+  <!-- ANIME EYES - stressed/reluctant expression -->
+  <!-- Left eye -->
+  <ellipse cx="381" cy="224" rx="14" ry="15" fill="white"/>
+  <ellipse cx="381" cy="226" rx="11" ry="12" fill="#3B1F0A"/>
+  <ellipse cx="381" cy="226" rx="8" ry="9" fill="#6B3A1A"/>
+  <!-- Pupil shine -->
+  <ellipse cx="376" cy="221" rx="3" ry="4" fill="white" opacity="0.9"/>
+  <circle cx="385" cy="230" r="1.5" fill="white" opacity="0.6"/>
+  <!-- Stress lines above left eye -->
+  <path d="M370,210 Q376,205 383,208" stroke="#8B6914" stroke-width="2" fill="none"/>
+  <path d="M368,207 L370,200" stroke="#C0392B" stroke-width="1.5"/>
+  <path d="M376,205 L375,198" stroke="#C0392B" stroke-width="1.5"/>
+  <path d="M383,207 L384,200" stroke="#C0392B" stroke-width="1.5"/>
+
+  <!-- Right eye -->
+  <ellipse cx="417" cy="224" rx="14" ry="15" fill="white"/>
+  <ellipse cx="417" cy="226" rx="11" ry="12" fill="#3B1F0A"/>
+  <ellipse cx="417" cy="226" rx="8" ry="9" fill="#6B3A1A"/>
+  <ellipse cx="412" cy="221" rx="3" ry="4" fill="white" opacity="0.9"/>
+  <circle cx="421" cy="230" r="1.5" fill="white" opacity="0.6"/>
+  <!-- Stress lines above right eye -->
+  <path d="M415,210 Q421,205 427,208" stroke="#8B6914" stroke-width="2" fill="none"/>
+  <path d="M416,207 L415,200" stroke="#C0392B" stroke-width="1.5"/>
+  <path d="M421,205 L422,198" stroke="#C0392B" stroke-width="1.5"/>
+  <path d="M427,207 L429,200" stroke="#C0392B" stroke-width="1.5"/>
+
+  <!-- Eyebrows - furrowed/worried -->
+  <path d="M368,210 Q381,205 393,210" stroke="#2C1500" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M405,210 Q417,205 430,210" stroke="#2C1500" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <path d="M396,235 Q399,242 402,235" stroke="#E8A87C" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Mouth - tight grimace, reluctant to spend -->
+  <path d="M383,250 Q391,247 399,249 Q407,247 415,250" stroke="#C0776A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Cheek blush (stress blush) -->
+  <ellipse cx="368" cy="242" rx="10" ry="6" fill="#FF9999" opacity="0.45"/>
+  <ellipse cx="430" cy="242" rx="10" ry="6" fill="#FF9999" opacity="0.45"/>
+
+  <!-- Sweat drops (anime stress sweat) -->
+  <g fill="#87CEEB" opacity="0.9">
+    <ellipse cx="448" cy="208" rx="5" ry="8" transform="rotate(15,448,208)"/>
+    <circle cx="448" cy="218" r="3"/>
+    <ellipse cx="458" cy="198" rx="3" ry="6" transform="rotate(10,458,198)"/>
+  </g>
+
+  <!-- ===== SCATTERED COINS ON MOUNTAIN TOP ===== -->
+  <g filter="url(#glow)">
+    <!-- Coin pile left -->
+    <circle cx="330" cy="375" r="10" fill="url(#coinGlow)" stroke="#DAA520" stroke-width="1.5"/>
+    <text x="330" y="379" text-anchor="middle" font-size="9" fill="#8B6914" font-weight="bold">¥</text>
+    <circle cx="318" cy="370" r="8" fill="url(#coinGlow)" stroke="#DAA520" stroke-width="1.5"/>
+    <text x="318" y="374" text-anchor="middle" font-size="7" fill="#8B6914" font-weight="bold">¥</text>
+    <circle cx="345" cy="368" r="9" fill="url(#coinGlow)" stroke="#DAA520" stroke-width="1.5"/>
+    <text x="345" y="372" text-anchor="middle" font-size="8" fill="#8B6914" font-weight="bold">¥</text>
+
+    <!-- Coin pile right -->
+    <circle cx="462" cy="375" r="10" fill="url(#coinGlow)" stroke="#DAA520" stroke-width="1.5"/>
+    <text x="462" y="379" text-anchor="middle" font-size="9" fill="#8B6914" font-weight="bold">¥</text>
+    <circle cx="475" cy="370" r="8" fill="url(#coinGlow)" stroke="#DAA520" stroke-width="1.5"/>
+    <text x="475" y="374" text-anchor="middle" font-size="7" fill="#8B6914" font-weight="bold">¥</text>
+    <circle cx="450" cy="368" r="9" fill="url(#coinGlow)" stroke="#DAA520" stroke-width="1.5"/>
+    <text x="450" y="372" text-anchor="middle" font-size="8" fill="#8B6914" font-weight="bold">¥</text>
+  </g>
+
+  <!-- ===== THOUGHT BUBBLE - can't spend ===== -->
+  <!-- Bubble dots leading up -->
+  <circle cx="440" cy="215" r="4" fill="white" stroke="#BBBBBB" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="455" cy="200" r="6" fill="white" stroke="#BBBBBB" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="475" cy="182" r="9" fill="white" stroke="#BBBBBB" stroke-width="1.5" opacity="0.9"/>
+
+  <!-- Main thought bubble -->
+  <rect x="490" y="90" width="230" height="140" rx="25" ry="25" fill="white" stroke="#BBBBBB" stroke-width="2.5" opacity="0.95" filter="url(#shadow)"/>
+
+  <!-- Inside thought bubble: Shop with X -->
+  <!-- Store icon -->
+  <rect x="510" y="110" width="55" height="45" rx="5" fill="#E8F4FF" stroke="#4A90D9" stroke-width="2"/>
+  <rect x="510" y="103" width="55" height="15" rx="3" fill="#4A90D9"/>
+  <text x="537" y="115" text-anchor="middle" font-family="serif" font-size="9" fill="white">ショップ</text>
+  <!-- Door -->
+  <rect x="526" y="130" width="18" height="25" rx="2" fill="#87CEEB"/>
+  <!-- Window -->
+  <rect x="515" y="115" width="12" height="12" rx="2" fill="#87CEEB"/>
+  <!-- Price tag in shop window -->
+  <text x="521" y="124" text-anchor="middle" font-size="8" fill="#C0392B">¥</text>
+
+  <!-- Big red X over shop -->
+  <line x1="505" y1="100" x2="572" y2="162" stroke="#E74C3C" stroke-width="6" stroke-linecap="round"/>
+  <line x1="572" y1="100" x2="505" y2="162" stroke="#E74C3C" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Arrow pointing to restaurant crossed out -->
+  <g transform="translate(585, 100)">
+    <!-- Fork & knife icon -->
+    <line x1="10" y1="10" x2="10" y2="45" stroke="#555" stroke-width="3" stroke-linecap="round"/>
+    <path d="M5,10 Q5,25 10,28" stroke="#555" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <line x1="15" y1="10" x2="15" y2="28" stroke="#555" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M6,10 L14,10" stroke="#555" stroke-width="2" stroke-linecap="round"/>
+    <!-- Price -->
+    <text x="22" y="35" font-size="11" fill="#C0392B">¥8000</text>
+    <!-- X -->
+    <line x1="0" y1="8" x2="45" y2="58" stroke="#E74C3C" stroke-width="5" stroke-linecap="round"/>
+    <line x1="45" y1="8" x2="0" y2="58" stroke="#E74C3C" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Thought text -->
+  <text x="605" y="175" text-anchor="middle" font-family="serif" font-size="15" fill="#C0392B" font-weight="bold">もったいない！</text>
+  <text x="605" y="195" text-anchor="middle" font-family="serif" font-size="12" fill="#777">使えない…</text>
+  <text x="605" y="215" text-anchor="middle" font-family="serif" font-size="12" fill="#777">貯めなきゃ…</text>
+
+  <!-- ===== BANNER AT TOP ===== -->
+  <rect x="80" y="18" width="640" height="52" rx="12" fill="#2C3E7A" opacity="0.88"/>
+  <text x="400" y="48" text-anchor="middle" font-family="serif" font-size="22" fill="#FFD700" font-weight="bold" filter="url(#glow)">小金持ち山の頂上で使えない男</text>
+
+  <!-- ===== BOTTOM CAPTION ===== -->
+  <rect x="150" y="795" width="500" height="80" rx="15" fill="white" opacity="0.85"/>
+  <text x="400" y="828" text-anchor="middle" font-family="serif" font-size="16" fill="#2C3E7A" font-weight="bold">「やっと頂上に着いた！」</text>
+  <text x="400" y="852" text-anchor="middle" font-family="serif" font-size="14" fill="#555">「…でも使ったらもったいないよな」</text>
+  <text x="400" y="870" text-anchor="middle" font-family="serif" font-size="12" fill="#C0392B">（お金はしっかり握りしめたまま）</text>
+
+  <!-- Small coins floating in sky (decorative) -->
+  <circle cx="65" cy="200" r="12" fill="url(#coinGlow)" stroke="#DAA520" stroke-width="1.5" opacity="0.6"/>
+  <text x="65" y="204" text-anchor="middle" font-size="10" fill="#8B6914" font-weight="bold" opacity="0.6">¥</text>
+  <circle cx="735" cy="170" r="10" fill="url(#coinGlow)" stroke="#DAA520" stroke-width="1.5" opacity="0.6"/>
+  <text x="735" y="174" text-anchor="middle" font-size="9" fill="#8B6914" font-weight="bold" opacity="0.6">¥</text>
+  <circle cx="720" cy="250" r="8" fill="url(#coinGlow)" stroke="#DAA520" stroke-width="1.5" opacity="0.5"/>
+  <text x="720" y="253" text-anchor="middle" font-size="7" fill="#8B6914" font-weight="bold" opacity="0.5">¥</text>
+</svg>
